@@ -3,7 +3,7 @@
 # @Time    : 2017/5/9 11:16
 # @Author  : Zoe
 # @Site    : 
-# @File    : mnist_inference.py
+# @File    : inference.py
 # @Software: PyCharm Community Edition
 
 
