@@ -18,7 +18,7 @@ n_hidden_unins = 128 # hidden units
 n_classes = 10
 epochs = 100
 
-if __name__ == '__main__':
+def main():
     st = time.time()
     mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
     xs = tf.placeholder(tf.float32, [None, n_steps, n_inputs], name="inputs")
@@ -41,7 +41,8 @@ if __name__ == '__main__':
         print('training finish.\ncost time:', int(end - st), 'seconds\ntest accuracy:',
               sess.run(model.accuracy[0], feed_dict=
               {xs: mnist.test.images.reshape([-1, n_steps, n_inputs]), ys: mnist.test.labels}))
-
+if __name__ == '__main__':
+    main()
 
 
 ##TODO: train process
